@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JS Task-2 || CTG-52</title>
+
+        <!-- Meta Keyword For Search Engine -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- BootStrap Here -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <!-- Custom CSS Here -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="css/custom.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Google Font  -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+        <!-- Fav Icon -->
+        <link href="images/js1_0.png" rel="icon" type="images/png"/>
+    </head>
+    <body>
+        <section class="header-secion">
+            <div class="container">
+                <div class="row" style="border-bottom:5px solid red;">
+                    <div class="col-sm-12 col-lg-7">
+                        <h2 class="text-center">Calculator</h2>
+                        <div id="calculator" class="">
+
+                            <form>
+                                <input type="text" id="inputbox" class="form-control"  readonly>
+                                <button type="button"  onclick="Clear();">C</button>
+                                <button type="button"   onclick="root();">&radic;</button>
+                                <button type="button"  onclick="percent();">%</button>
+                                <button type="button"   onclick="ac();">&larr;</button>
+                                <button type="button"  onclick="seven();">7</button>
+                                <button type="button"  onclick="eight();">8</button>
+                                <button type="button"  onclick="nine();">9</button>
+                                <button type="button"  onclick="divide();">/</button>
+                                <button type="button"  onclick="four();">4</button>
+                                <button type="button"  onclick="five();">5</button>
+                                <button type="button"  onclick="six();">6</button>
+                                <button type="button"  onclick="multi();">*</button>
+                                <button type="button"  onclick="three();">3</button>
+                                <button type="button"  onclick="two();">2</button>
+                                <button type="button"   onclick="one();">1</button>
+                                <button type="button"  onclick="minus();">-</button>
+                                <button type="button"  onclick="float();">.</button>
+                                <button type="button"  onclick="zero();">0</button>
+                                <button type="button"  onclick="equal();">=</button>
+                                <button type="button"  onclick="plus();">+</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-5">
+                       
+                        <div id="table" class="jumbotron">
+                            <h2>Multiplication</h2>
+                            <input type="text" id="scanf">
+                            <button type="button" class="btn-warning" onclick="Onclick();">
+                                Result
+                            </button>
+                            <h3 id="printf" style="color:maroon;"> </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-lg-7">
+                        <div id="form">
+                            <h1 class="text-center">Sign-up Form</h1>
+                            <form action="#" name="signup">
+                                <input type="text" name="fname" id="fff" class="form-control form-group" placeholder="First Name" required>
+                                <input type="text" name="sname" class="form-control form-group" placeholder="Sure Name" required>
+                                <input type="email" name="mail" class="form-control form-group" placeholder="Email Address" required>
+                                <input type="email" name="rmail" class="form-control form-group"  placeholder="Re-type Email Address" required>
+
+                                <input type="text" name="mobile" class="form-control form-group" placeholder="Mobile number" required>
+                                <input type="password" name="pw" class="form-control form-group" placeholder="Password" required>
+                                <input type="password" name="rpw" class="form-control form-group" placeholder="Re-type Password" required>
+                                <button type="submit" class="btn btn-success" onclick="Signup();">Sign-up</button>
+
+                            </form>
+                            <h3 id="message"></h3>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-5">
+                        <div id="onkeyup">
+                            <h2>OnKey Up Event Js</h2>
+                            <textarea class="form-control" rows="5" id="Text" onkeyup="Text()"> </textarea>
+                            <h4 id="show"></h4>
+                        </div>
+                        <div id="onmouseover">
+                            <h3> OnMouseOver Event & OnMouseOver Event Js:</h3>
+                            <h1 style="color: black; padding: 25px;" id="hello" onmouseover="Cap();" onmouseout="Back();">Welcome to CodersTrust Bangladesh</h1>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Js Start here -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!--//Calculator Js Start Here-->
+        <script>
+
+                                //Calculator Js Start Here
+                                function Clear() {
+                                    document.getElementById("inputbox").value = "";
+                                }
+                                function root() {
+                                    var rt = document.getElementById("inputbox").value;
+                                    document.getElementById("inputbox").value = "√";
+                                }
+                                function ac() {
+                                    document.getElementById("inputbox").value = '';
+                                }
+
+                                function one() {
+                                    document.getElementById("inputbox").value += 1;
+                                }
+                                function two() {
+                                    document.getElementById("inputbox").value += 2;
+                                }
+                                function three() {
+                                    document.getElementById("inputbox").value += 3;
+                                }
+                                function four() {
+                                    document.getElementById("inputbox").value += 4;
+                                }
+                                function five() {
+                                    document.getElementById("inputbox").value += 5;
+                                }
+                                function six() {
+                                    document.getElementById("inputbox").value += 6;
+                                }
+                                function seven() {
+                                    document.getElementById("inputbox").value += 7;
+                                }
+                                function eight() {
+                                    document.getElementById("inputbox").value += 8;
+                                }
+                                function nine() {
+                                    document.getElementById("inputbox").value += 9;
+                                }
+                                function zero() {
+                                    document.getElementById("inputbox").value += 0;
+                                }
+                                function plus() {
+                                    document.getElementById("inputbox").value += "+";
+                                }
+                                function minus() {
+                                    document.getElementById("inputbox").value += "-";
+                                }
+                                function multi() {
+                                    document.getElementById("inputbox").value += "*";
+                                }
+                                function divide() {
+                                    document.getElementById("inputbox").value += "/";
+                                }
+                                function percent() {
+                                    document.getElementById("inputbox").value += "%";
+                                }
+                                function equal() {
+                                    var result = eval(document.getElementById("inputbox").value);
+                                    document.getElementById("inputbox").value = result;
+                                }
+                                function float() {
+                                    document.getElementById("inputbox").value += ".";
+                                }
+                                //Calculator Js End Here
+
+
+        </script>
+        <script>
+            function Signup() {
+                var fn = document.signup.fname.value;
+                var sn = document.signup.sname.value;
+                var em = document.signup.mail.value;
+                var rem = document.signup.rmail.value;
+                var nmbr = document.signup.mobile.value;
+                var pw = document.signup.pw.value;
+                var rpw = document.signup.rpw.value;
+                if (fn == "" || sn == "" || em == "" || rem == "" || nmbr == "" || pw == "" || rpw == "") {
+                    document.getElementById("message").style.color = "red";
+                    document.getElementById("message").innerHTML = "Filled up the form Above, Can not empty any field !";
+                } else if (em !== rem) {
+                    document.getElementById("dee").innerHTML = "Email Not Matched";
+                } else if (nmbr.length < 11) {
+                    document.getElementById("message").innerHTML = "Enter Your Valid Mobile Number";
+                } else if (pw.length < 8) {
+                    document.getElementById("message").innerHTML = "Password  Must Be Contains 8-character";
+                } else if (pw !== rpw) {
+                    document.getElementById("message").innerHTML = "Password Not Matched";
+                } else {
+                    document.getElementById("message").innerHTML = "Sign-Up Successfully.Check Your Email for Confirmation";
+                }
+
+
+
+
+            }
+        </script>
+        <script>
+            function Cap() {
+                document.getElementById("hello").style.background = "red";
+                document.getElementById("hello").style.color = "white";
+
+
+            }
+            function Back() {
+                document.getElementById("hello").style.background = "white";
+                document.getElementById("hello").style.color = "black";
+            }
+
+            function Text() {
+                var data = document.getElementById("Text").value;
+                document.getElementById("show").innerHTML = data;
+            }
+        </script>
+        <!--Multi Js Start Here-->
+
+        <script type="text/javascript">
+            function Onclick() {
+                var n = document.getElementById("scanf").value;
+                var r = "";
+                for (i = 1; i <= 10; i++) {
+                    if (n === "") {
+                        document.getElementById("printf").innerHTML = "Here no input !. Please type in the box above";
+                    } else {
+                        r = r + n + " x " + i + " = " + n * i + "<br>";
+                        document.getElementById("printf").innerHTML = r;
+                    }
+                }
+            }
+
+        </script>
+        <!-- Js End here -->
+    </body>
+</html>
